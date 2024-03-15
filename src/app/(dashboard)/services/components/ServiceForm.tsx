@@ -7,6 +7,7 @@ import { Button, buttonVariants } from "~/components/ui/button"
 import { Input } from "~/components/ui/input"
 import PhoneInputWithCountrySelect from "react-phone-number-input"
 import { InputForPhone } from "./PhoneInput"
+import { api } from "~/trpc/react"
 
 
 const formSchema = z.object({ "name": z.string().min(1).max(255), "email": z.string().min(1).max(255), "phno": z.string().min(1).max(255) })
@@ -21,9 +22,13 @@ export function ServiceForm() {
         },
     })
 
+    const sendemail = api.post.testemail.useMutation();
+
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
         form.reset();
+        sendemail.mutate(values);
+        console.log(sendemail);
     }
 
     return (
@@ -37,7 +42,7 @@ export function ServiceForm() {
                         <FormItem>
                             <FormLabel>Your Name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Nyal Kakadia" {...field} />
+                                <Input placeholder="John doe" {...field} />
                             </FormControl>
 
                             <FormMessage />
@@ -52,7 +57,7 @@ export function ServiceForm() {
                         <FormItem>
                             <FormLabel>Your Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="nyalkakadia@gmail.com" {...field} />
+                                <Input placeholder="johndoe@gmail.com" {...field} />
                             </FormControl>
 
                             <FormMessage />
@@ -67,7 +72,7 @@ export function ServiceForm() {
                         <FormItem>
                             <FormLabel>Your phone number</FormLabel>
                             <FormControl>
-                                <Input type="text" placeholder="" {...field} />
+                                <Input type="text" placeholder="Phone no" {...field} />
                             </FormControl>
   
                             <FormMessage />

@@ -35,6 +35,9 @@ const config = {
           DEFAULT: '#e1dbf6',
           dark: '#e1dbf6',
         },
+        purplebghome:{
+          default:"#B081FE",
+        },
 
         blackmain:{
           light: '#0F0F0F',
@@ -42,7 +45,7 @@ const config = {
           dark: '#0F0F0F',
         },
         whitemain:{
-          light: '#CACACA',
+          light: '#EAEAEA',
           DEFAULT: '#CACACA',
           dark: '#CACACA',
         },
@@ -54,7 +57,7 @@ const config = {
         greymain:{
           light: '#FFFFFF',
           DEFAULT: '#FFFFFF',
-          dark: '#FFFFFF',
+          dark: '#848484',
 
         },
         

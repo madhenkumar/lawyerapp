@@ -10,7 +10,7 @@ const page = () => {
       <section className='padding-t padding-b'>
         <Hero />
       </section>
-      <section className='pt-20 px-80'>
+      <section className='pt-20 px-80  bg-purplebghome-default pb-10'>
         <OurServices />
       </section>
       <section>

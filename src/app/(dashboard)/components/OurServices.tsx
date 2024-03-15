@@ -35,13 +35,25 @@ const lawyerServices: Services[] = [
         name: 'Service-1',
         description: 'Plan for the distribution of assets and properties to heirs and beneficiaries.',
         imageUrl: "/customerservice.png"
+    },
+    {
+        id: 5,
+        name: 'Service-1',
+        description: 'Representation in court for civil, criminal, or administrative matters.',
+        imageUrl: "/customerservice.png"
+    },
+    {
+        id: 6,
+        name: 'Service-1',
+        description: 'Plan for the distribution of assets and properties to heirs and beneficiaries.',
+        imageUrl: "/customerservice.png"
     }
 ];
 
 
 export const OurServices = () => {
     return (
-        <div className='relative' >
+        <div  >
             <p className='text-xl font-montserrat text-purplemain'> OUR SERVICES</p>
             <h1 className='font-montserrat font-medium text-3xl pt-5'>
             <span className="whitespace-nowrap">Our agency experts will provide you</span>
@@ -49,19 +61,23 @@ export const OurServices = () => {
             with a full stack of services
 
             </h1>
-                <div className='pt-10 grid grid-cols-3 gap-10'>
+            <div className='flex flex-col items-center'>
+            <div className='pt-10 grid grid-cols-3 gap-10'>
                     {lawyerServices.map((service)=>(
                             <EachService key={service.id}description={service.description} id={service.id} imageUrl={service.imageUrl} name={service.name}/>
                     )
 
                     )}                    
                 </div>
-            <div className='absolute bottom-0 right-0'>   
-            <Link href="/services" className={buttonVariants({ variant: "outline",className: 'border-purplemain px-4 py-4 rounded-none' })}>
+            <div >   
+            <Link href="/services" className={buttonVariants({ variant: "outline",className: 'border-purplemain px-4 py-4 rounded-none mt-10' })}>
                 <span className='font-montserrat text-purplemain pr-2'>Explore all services</span>
             <Icons.arrowRight className="iconfill"/>
             </Link>
             </div>
+            </div>
+              
+            
         </div>
     )
 }

@@ -34,9 +34,9 @@ const TestNav = () => {
 
   return (
 
-    <header className='absolute padding-x py-5 z-10 w-full'>
+    <header className='absolute padding-x py-5 z-10 w-full bg-purplemain-light'>
         <nav className='flex justify-between items-center max-container'>
-        <Image alt="logo" width="100" height="25" src="/logotwo.png"/>
+        <Image alt="logo" width="50" height="10" src="/logotwo.png"/>
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
         {Navitems.map((item)=>(
             <li key={item.SerialNo}>
