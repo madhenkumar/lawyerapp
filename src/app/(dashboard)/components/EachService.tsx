@@ -9,7 +9,7 @@ import { Icons } from './Icons'
 const EachService = ({ description, id, name, imageUrl }: Services & { key: any }) => {
   return (
     <div>
-    <div key={id} className='w-[227px] h-[290px] py-[20px] bg-whitemain-light rounded-[40px] flex flex-col justify-start items-center  hover:shadow-purplemain shadow-sm transition-shadow duration-500 hover:shadow-2xl'>
+    <div key={id} className='w-[227px] h-[290px] py-[20px] bg-whitemain-light rounded-[40px] flex flex-col justify-start items-center  hover:shadow-purplemain shadow-sm  hover:shadow-2xl transform transition duration-100 hover:scale-110'>
 
       <div>
       <Icons.service className='w-[100px] h-[71px] flex-1' />  
